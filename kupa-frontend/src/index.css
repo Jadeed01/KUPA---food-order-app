@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kupa-50: #eef7f1;
+  --color-kupa-100: #d9eee0;
+  --color-kupa-200: #b5dcc3;
+  --color-kupa-500: #3c8b5f;
+  --color-kupa-600: #2f7a50;
+  --color-kupa-700: #276843;
+  --color-kupa-800: #205537;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: #e9ecea;
+  color: #171717;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Leaflet map pin + tweaks */
+.kupa-pin span {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: #2f7a50;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.kupa-pin span::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  background: #fff;
+  border-radius: 50%;
+}
+.leaflet-container {
+  font-family: inherit;
+}
+.leaflet-bottom {
+  margin-bottom: 26px;
+}
+.leaflet-control-attribution {
+  font-size: 9px;
+}
